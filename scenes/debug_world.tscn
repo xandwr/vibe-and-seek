@@ -4,8 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://dcrj3ctvhd1sv" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="2_fvg1q"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hoy76"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+sky_top_color = Color(0.185457, 0.0194907, 0.285226, 1)
+sky_horizon_color = Color(0.905941, 0.563641, 0.207522, 1)
+ground_bottom_color = Color(0.6794, 0.390948, 0.176608, 1)
+ground_horizon_color = Color(0.905882, 0.564706, 0.207843, 1)
+ground_curve = 0.098492
 
 [sub_resource type="Sky" id="Sky_rqers"]
 sky_material = SubResource("ProceduralSkyMaterial_hoy76")
@@ -18,6 +21,8 @@ glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ywp2"]
 albedo_texture = ExtResource("2_fvg1q")
+metallic_specular = 0.0
+roughness = 0.95
 uv1_triplanar = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_stq3c"]
@@ -31,7 +36,9 @@ script = ExtResource("1_lkw13")
 environment = SubResource("Environment_vqbcu")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+transform = Transform3D(-0.943801, 0.116289, -0.309381, 0, 0.93606, 0.351842, 0.330514, 0.332069, -0.883454, 0, 0, 0)
+light_color = Color(1, 0.620017, 0.325408, 1)
+light_energy = 2.0
 shadow_enabled = true
 
 [node name="PlaneMesh" type="CSGMesh3D" parent="."]
